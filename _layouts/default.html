@@ -23,7 +23,7 @@
                          srcset="{{ site.base }}/img/logo@2x.png 2x"
                          alt="Awesome" id="logo">
                 </a>
-                <ul class="nav nav-pills justify-content-center">
+                <ul class="nav nav-pills nav-link-color justify-content-center">
 
                     {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
                     {% for item in site.navigation %}
@@ -39,7 +39,7 @@
                         {% endif %}
 
                         <li class="nav-item">
-                            <a class="nav-link {{ maybe-active }}"
+                            <a class="nav-link nav-link-color {{ maybe-active }}"
                                href="{{ site.base }}{{ item.link }}">
                                 {{ item.title }}
                             </a>
@@ -65,9 +65,9 @@
 
             <div class="footer">
                 <p>
-                    <a href="http://dept.example.edu/">Illustrious Department</a>
-                    at the
-                    <a href="http://example.edu/">University of Example</a>
+                    <a href="https://www.csail.mit.edu">MIT CSAIL</a>
+		    &nbsp &nbsp &nbsp
+		    <a href="https://accessibility.mit.edu/">Accessibility</a>
                 </p>
             </div>
 

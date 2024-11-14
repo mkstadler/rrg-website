@@ -2,16 +2,41 @@
 layout: default
 title: People
 
-picture-role-groups:
-- {roles: [faculty, postdoc, staff], width: 4}
-- {roles: [grad], width: 8}
+# groups of columns of {roles: list, width: num, image: bool}
+role-tables:
+- - roles: [faculty, staff]
+    width: 8
+    image: true
+- - roles: [scientist, postdoc]
+    width: 4
+    image: true
+  - roles: [grad]
+    width: 8
+    image: true
+- - roles: [collab, ugrad, ugrad-alum]
+    width: 8
+    image: false
+- - roles: [alum]
+    width: 8
+    image: false
 
-no-picture-role-groups:
-- {roles: [collab, ugrad, ugrad-alum], width: 5}
-- {roles: [alum], width: 7}
 ---
 
-<section class="people row justify-content-between">
+<div id="people">
+    {% for role-table in page.role-tables %}
+        <section class="people row justify-content-between">
+            {% for role-column in role-table %}
+                <div class="col-md-{{ role-column.width }}">
+                    {% for role in role-column.roles %}
+                        {% include role-people.html role=role image=role-column.image %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+    {% endfor %}
+</div>
+
+<!-- <section class="people row justify-content-between">
     {% for role-group in page.picture-role-groups %}
         <div class="col-md-{{ role-group.width }}">
             {% for role in role-group.roles %}
@@ -29,4 +54,5 @@ no-picture-role-groups:
             {% endfor %}
         </div>
     {% endfor %}
-</section>
+</section> -->
+

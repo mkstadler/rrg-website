@@ -5,25 +5,29 @@ notitle: true
 
 # groups of columns of {roles: list, width: num, image: bool}
 role-tables:
-- - roles: [faculty, postdoc, staff]
+- - roles: [faculty, staff]
+    width: 8
+    image: true
+- - roles: [scientist, postdoc]
     width: 4
     image: true
   - roles: [grad]
     width: 8
     image: true
 - - roles: [collab, ugrad, ugrad-alum]
-    width: 5
+    width: 8
     image: false
-  - roles: [alum]
-    width: 7
+- - roles: [alum]
+    width: 8
     image: false
 
 ---
 
 <div class="jumbotron">
     <p>
-        The <b>Awesome Research Group</b> at <b>Example U</b> does all sorts of
-        research. Here is a place where we tell you exactly what that is!
+        Our research goals are to build unmanned vehicles that can fly without GPS through unmapped indoor environments, robots that can drive through unmapped cities, and to build social robots that can quickly learn what people want without being annoying or intrusive. Such robots must be able to perform effectively with uncertain and limited knowledge of the world, be easily deployed in new environments and immediately start autonomous operations with no prior information.
+	<br><br>
+This engineering challenge will require algorithmic advances in decision-theoretic planning, statistical inference, and artificial intelligence. We specifically focus on problems of planning and control in domains with uncertain models, using optimization, statistical estimation and machine learning to learn good plans and policies from experience.
     </p>
 </div>
 
@@ -59,7 +63,7 @@ role-tables:
     </div>
 </section>
 
-<div id="people">
+<!-- <div id="people">
     <h2>People</h2>
     {% for role-table in page.role-tables %}
         <section class="people row justify-content-between">
@@ -73,3 +77,4 @@ role-tables:
         </section>
     {% endfor %}
 </div>
+ -->

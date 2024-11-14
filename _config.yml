@@ -1,5 +1,5 @@
-name: Awesome Research Group
-url: http://awesome.example.edu
+name: MIT RRG
+url: http://people.csail.mit.edu/mstadler/
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
@@ -14,17 +14,17 @@ roles:
   - key: faculty
     name: Faculty
   - key: staff
-    name: Staff
+    name: Administrative Staff
+  - key: scientist
+    name: Research Scientists    
   - key: postdoc
-    name: Researchers
+    name: Postdoctoral Associates
+  - key: visitor
+    name: Visitors
   - key: grad
     name: Graduate Students
   - key: ugrad
     name: Undergraduate Students
-  - key: ugrad-alum
-    name: Past Undergraduate Students
-  - key: collab
-    name: Collaborators
   - key: alum
     name: Alumni
 
@@ -43,11 +43,13 @@ collections:
 navigation:
   - title: Home
     link: /
-  - title: People
-    link: /#people
   - title: Research
     link: /research.html
+  - title: People
+    link: /people.html
   - title: Publications
     link: /publications.html
-  - title: Code
-    link: /code.html
+  - title: Videos
+    link: "https://www.youtube.com/channel/UCdih_8Zlb6D2Wa6eYn-9T6A"
+  - title: Contact
+    link: /contact.html
